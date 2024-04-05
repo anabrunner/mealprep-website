@@ -1,3 +1,5 @@
+import { Footer } from '@/components/footer/Footer';
+import { Navbar } from '@/components/nav/Navbar';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -16,8 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <h1>Heading</h1>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
