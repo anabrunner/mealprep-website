@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --mainLightPink: #e8b0a5;
+  --mainDarkPurple: #31263e;
+  --lightPink: #c38d9e;
+  --darkPink: #9e5e69;
+  --darkPurple: #4d2c3d;
+}
