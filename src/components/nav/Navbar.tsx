@@ -24,10 +24,13 @@ export function Navbar({}: INavbar) {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="about">About Us</Link>
+            <Link href="blog">Blog</Link>
           </li>
           <li>
-            <Link href="blog">Blog</Link>
+            <Link href="about">About</Link>
+          </li>
+          <li>
+            <Link href="contact">Contact</Link>
           </li>
           <li className={styles.loginBtn}>
             <Link href="login">Login</Link>
