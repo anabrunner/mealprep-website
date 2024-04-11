@@ -1,3 +1,47 @@
-.footer {
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
   display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  box-shadow: 0px -5px 10px lightgray;
+  width: 100%;
+  background-color: var(--mainLightPink);
+  color: var(--mainDarkPurple);
+  padding: 10px;
+}
+
+.logoHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+}
+
+.copyright img:hover {
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+.navigationLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.navigationLinks li:hover {
+  color: var(--darkPink);
+  transition: color 0.3s ease-in-out;
+}
+
+.loginBtn {
+  font-weight: bold;
 }
