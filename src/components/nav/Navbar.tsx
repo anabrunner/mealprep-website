@@ -1,3 +1,5 @@
+'use client';
+import { SignOutButton, useUser } from '@clerk/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import logoPic from '../../../public/PrepPotatoLogo.png';
@@ -6,9 +8,10 @@ import styles from './Navbar.module.css';
 export interface INavbar {}
 // eslint-disable-next-line no-empty-pattern
 export function Navbar({}: INavbar) {
+  const { user, isLoaded } = useUser();
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.container}>
+    <header className={styles.navbar}>
+      <nav className={styles.container}>
         <div className={styles.logoHeader}>
           <Image src={logoPic} alt="PrepPotato Logo" width={100} />
           <h1 className="font-headingFont">PrepPotato</h1>
@@ -32,11 +35,18 @@ export function Navbar({}: INavbar) {
           <li>
             <Link href="contact">Contact</Link>
           </li>
-          <li className={styles.loginBtn}>
-            <Link href="login">Login</Link>
-          </li>
+          {isLoaded && user && (
+            <li className={styles.loginBtn}>
+              <SignOutButton>Logout</SignOutButton>
+            </li>
+          )}
+          {!user && (
+            <li className={styles.loginBtn}>
+              <Link href="login">Login</Link>
+            </li>
+          )}
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
