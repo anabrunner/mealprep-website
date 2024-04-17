@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Ana-Brunner-s-workspace-83mjru.us-east-1.xata.sh/db/prep-potato",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

@@ -16,6 +16,7 @@
     "@clerk/nextjs": "^4.29.12",
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
+    "@xata.io/client": "^0.29.4",
     "cross-env": "^7.0.3",
     "next": "14.1.4",
     "react": "^18",
