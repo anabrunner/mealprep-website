@@ -12,10 +12,12 @@ export function Navbar({}: INavbar) {
   return (
     <header className={styles.navbar}>
       <nav className={styles.container}>
-        <div className={styles.logoHeader}>
-          <Image src={logoPic} alt="PrepPotato Logo" width={100} />
-          <h1 className="font-headingFont">PrepPotato</h1>
-        </div>
+        <Link href="/">
+          <div className={styles.logoHeader}>
+            <Image src={logoPic} alt="PrepPotato Logo" width={100} />
+            <h1 className="font-headingFont">PrepPotato</h1>
+          </div>
+        </Link>
         <input type="checkbox" name="" id="" />
         <div className={styles.hamburgerLines}>
           <span className={styles.line1}></span>
@@ -24,7 +26,7 @@ export function Navbar({}: INavbar) {
         </div>
         <ul className={styles.menuLinks}>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="dashboard">Dashboard</Link>
           </li>
           <li>
             <Link href="blog">Blog</Link>
