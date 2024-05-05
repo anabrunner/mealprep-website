@@ -44,7 +44,7 @@ export function Navbar({}: INavbar) {
           )}
           {!user && (
             <li className={styles.loginBtn}>
-              <Link href="login">Login</Link>
+              <Link href="sign-in">Login</Link>
             </li>
           )}
         </ul>
