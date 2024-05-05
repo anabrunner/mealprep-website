@@ -21,9 +21,9 @@ export default function RootLayout({
     >
       <ClerkProvider>
         <body className="font-bodyFont">
-          <div className="flex flex-col justify-between min-h-screen">
+          <div className="flex flex-col justify-between items-center min-h-screen">
             <Navbar />
-            {children}
+            <div className="mt-20 md:mt-0">{children}</div>
             <Footer />
           </div>
         </body>

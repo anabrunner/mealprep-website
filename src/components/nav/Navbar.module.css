@@ -28,6 +28,7 @@
 .logoHeader h1 {
   font-size: 3rem;
   margin: 10px;
+  color: var(--mainDarkPurple);
 }
 
 .menuLinks {
