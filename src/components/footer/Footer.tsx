@@ -1,3 +1,5 @@
+'use client';
+import { SignOutButton, useUser } from '@clerk/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import logoPic from '../../../public/PrepPotatoLogo.png';
@@ -7,6 +9,7 @@ import styles from './Footer.module.css';
 export interface IFooter {}
 // eslint-disable-next-line no-empty-pattern
 export function Footer({}: IFooter) {
+  const { user, isLoaded } = useUser();
   const date = new Date();
   const currentYear = date.getFullYear();
   return (
@@ -22,6 +25,9 @@ export function Footer({}: IFooter) {
             <Link href="/">Home</Link>
           </li>
           <li>
+            <Link href="dashboard">Dashboard</Link>
+          </li>
+          <li>
             <Link href="blog">Blog</Link>
           </li>
           <li>
@@ -30,9 +36,16 @@ export function Footer({}: IFooter) {
           <li>
             <Link href="contact">Contact</Link>
           </li>
-          <li className={styles.loginBtn}>
-            <Link href="login">Login</Link>
-          </li>
+          {isLoaded && user && (
+            <li className={styles.loginBtn}>
+              <SignOutButton>Logout</SignOutButton>
+            </li>
+          )}
+          {!user && (
+            <li className={styles.loginBtn}>
+              <Link href="sign-in">Login</Link>
+            </li>
+          )}
         </ul>
         <div className={styles.copyright}>
           &copy;&nbsp;{currentYear}&nbsp;
