@@ -31,7 +31,7 @@ This project is a full-stack website to help people plan their weekly or monthly
 - Home Page /home
 - About us /about
 - Guides and posts /blog
-- Login /login
+- Login /sign-in
 - Sign-up /sign-up
 - Dashboard /dashboard
 - Recipe library /dashboard/my-recipes

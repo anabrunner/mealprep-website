@@ -1,6 +1,7 @@
 import { Footer } from '@/components/footer/Footer';
 import { Navbar } from '@/components/nav/Navbar';
 import { ClerkProvider } from '@clerk/nextjs';
+import '@mantine/core/styles.css';
 import type { Metadata } from 'next';
 import { bodyFont, headingFont, subheadingFont } from './fonts';
 import './globals.css';
