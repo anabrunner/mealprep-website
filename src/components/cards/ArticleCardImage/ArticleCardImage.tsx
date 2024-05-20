@@ -21,7 +21,7 @@ export function ArticleCardImage({
       className={classes.card}
       style={{ backgroundImage: `url(${image})` }}
     >
-      <div>
+      <div className="z-10">
         <Text className={classes.category} size="xs">
           {category}
         </Text>
@@ -29,7 +29,11 @@ export function ArticleCardImage({
           {title}
         </Title>
       </div>
-      <Button variant="filled" color="darkPink" className="font-bodyFont">
+      <Button
+        variant="filled"
+        color="darkPink"
+        className="font-bodyFont opacity-100"
+      >
         <Link href="#">View</Link>
       </Button>
     </Paper>
