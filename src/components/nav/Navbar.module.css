@@ -1,5 +1,5 @@
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   width: 95%;
   margin: auto;
   display: flex;
@@ -62,7 +62,7 @@
   transition: color 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   .container {
     width: 100%;
   }
@@ -79,7 +79,11 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .navbar {
+    z-index: var(--mantine-z-index-max);
+  }
+
   .navbar input,
   .navbar .hamburgerLines {
     display: block;
