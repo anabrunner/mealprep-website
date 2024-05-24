@@ -1,0 +1,10 @@
+.links {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.links:hover {
+  color: var(--darkPink);
+  text-shadow: 0 0 1px var(--darkPink);
+  transition: all 0.3s ease-in-out;
+}

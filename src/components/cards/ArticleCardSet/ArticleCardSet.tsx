@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import { ArticleCardImage } from '../ArticleCardImage/ArticleCardImage';
+import { CardViewMore } from '../CardViewMore/CardViewMore';
 
 export interface IArticleCardSet {}
 // eslint-disable-next-line no-empty-pattern
@@ -14,11 +16,9 @@ export function ArticleCardSet({}: IArticleCardSet) {
         title="week of may 13 and and anad adna dadadad"
         image={image}
       />
-      <ArticleCardImage
-        category="test 4"
-        title="week of may 13 and and anad adna dadadad"
-        image={image}
-      />
+      <Link href="#">
+        <CardViewMore />
+      </Link>
     </div>
   );
 }
