@@ -1,7 +1,7 @@
 import { Footer } from '@/components/footer/Footer';
 import { Navbar } from '@/components/nav/Navbar';
 import { ClerkProvider } from '@clerk/nextjs';
-import { MantineProvider, createTheme } from '@mantine/core';
+import { ColorSchemeScript, MantineProvider, createTheme } from '@mantine/core';
 import '@mantine/core/styles.css';
 import type { Metadata } from 'next';
 import { bodyFont, headingFont, subheadingFont } from './fonts';
@@ -74,16 +74,19 @@ export default function RootLayout({
       lang="en"
       className={`${headingFont.variable} ${subheadingFont.variable} ${bodyFont.variable}`}
     >
+      <head>
+        <ColorSchemeScript />
+      </head>
       <ClerkProvider>
-        <MantineProvider theme={theme}>
-          <body className="font-bodyFont">
+        <body className="font-bodyFont">
+          <MantineProvider theme={theme}>
             <div className="flex flex-col justify-between items-center min-h-screen">
               <Navbar />
               <div className="mt-20 max-w-7xl w-11/12 md:mt-0">{children}</div>
               <Footer />
             </div>
-          </body>
-        </MantineProvider>
+          </MantineProvider>
+        </body>
       </ClerkProvider>
     </html>
   );
